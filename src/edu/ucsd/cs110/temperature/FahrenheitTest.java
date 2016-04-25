@@ -1,16 +1,8 @@
-
-/**
- * Created by oscarwlsong on 4/25/16.
- */
 package edu.ucsd.cs110.temperature;
-
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 public class FahrenheitTest {
     private float delta = 0.001f;
-
     @Test
     public void testFahrenheit(){
         float value = 12.34f;
@@ -24,13 +16,13 @@ public class FahrenheitTest {
         String string = temp.toString();
         String beginning = "" + value;
         String ending = " F";
-        // Verify the suffix of the formatted string
+// Verify the suffix of the formatted string
         assertTrue(string.startsWith(beginning));
-        // Verify the prefix of the formatted string
+// Verify the prefix of the formatted string
         assertTrue(string.endsWith(ending));
-        // Verify the middle of the formatted string
+// Verify the middle of the formatted string
         int endIndex = string.indexOf(ending);
-        // (Hint: what is the length of the middle of the string?)
+// (Hint: what is the length of the middle of the string?)
         assertTrue(string.substring(0, endIndex).equals(beginning));
     }
     @Test

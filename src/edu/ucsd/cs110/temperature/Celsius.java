@@ -12,20 +12,19 @@ public class Celsius extends Temperature {
 
     @Override
     public Temperature toCelsius(){
-        Celsius toC = new Celsius(((this.value -32)*(5))/9);
-        return toC;
+        return this;
     }
 
     @Override
     public Temperature toFahrenheit() {
-        Celsius toF = new Celsius(((this.value*5)/9) + 32);
-        return toF;
+        return new Fahrenheit(this.value*9/5 + 32);
+
     }
 
 
     public String toString()
         {
             // TODO: Complete this method
-            return "";
+            return this.value + " C";
         }
 }
